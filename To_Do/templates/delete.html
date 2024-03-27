@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color:black;
+                color:orange;
+
+            }
+            .box{
+                margin-top:40px;
+                text-align:center;
+            }
+            .card{
+                display:flex;
+                flex-wrap:wrap;
+                justify-content:center;
+                gap:10px;
+            }
+            a{
+                text-decoration:none;
+            }
+        </style>
+    </head>
+    <body>
+            <div class="box">
+                <div class="message">
+                    <p>Are you sure you want to remove ?</p>
+                </div>
+               <div class="card">
+                <div class="back">
+                    <button><a href="/">Cancle</a></button>
+                </div>
+    
+                <div class="delete">
+                    <form method='POST' action="">
+                        {% csrf_token %}
+                        <button>Confirm</button>
+                        </form>
+                </div>
+               </div>
+            </div>
+    </body>
+</html>

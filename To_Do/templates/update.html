@@ -1,0 +1,32 @@
+
+
+<html>
+    <head>
+        <style>
+            body{
+                background-color:black;
+                color:orange;
+
+            }
+            .box{
+                margin-top:40px;
+                text-align:center;
+            }
+       
+        </style>
+    </head>
+    <body>
+            <div class="box">
+
+                <h1>Update Task</h1>
+                <div class="update">
+                    <form method='POST' action="/update/{{task.pk}}/">
+                        {% csrf_token %}
+                        <input type='text' value={{task.title}} name='title'/>
+                        <button>Update</button>
+                    <form>
+                </div>
+            
+            </div>
+    </body>
+</html>
